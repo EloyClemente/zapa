@@ -1,0 +1,179 @@
+<template>
+	<style>
+		.componenteCookies__container{
+			height: 200px;
+			background-color: rgba(255,255,255,.9);
+			box-shadow:0  -2px  5px 0 rgba(0,0,0,0.16), 0  -2px 10px 0 rgba(0,0,0,0.12);
+			transition: all, 1s;
+			position: fixed;
+			top: calc(100% - 200px);
+			left: 0;
+		}
+		@media(max-width: 450px)
+		{
+			.componenteCookies__container{
+				height: 250px;
+				top: calc(100% - 250px);
+			}
+		}
+		.componenteCookies__texto{
+			font-family: 'Quicksand';
+			font-size: 14px;
+			color: #666;
+			background-color: #fff;
+			text-align: center;
+			letter-spacing: 1px;
+			font-weight: bold;
+			transition: all, .3s;
+			padding: 20px;
+		}
+		.componenteCookies__capaBotones{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			/*margin-top: 15px;*/
+		}
+		.componenteCookies__botones{
+			font-family: 'Quicksand';
+			font-size: 17px;
+			padding: 10px 20px 10px 20px;
+			color: #ff0b0b;
+			border: 2px solid #ff0b0b;
+			background-color: #fff;
+			font-weight: bold;
+			transition: all, .3s;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+		.componenteCookies__botones:hover{
+			background-color: #ff0b0b;
+			color: #fff;
+		}
+
+		@media(max-width: 650px)
+		{
+			.componenteCookies__texto{
+				font-size: 12px;
+			}
+			.componenteCookies__botones{
+				font-size: 15px;
+				padding: 5px 10px 5px 10px;
+				border-radius: 3px;
+			}
+		}
+
+
+
+
+	</style>
+
+	<div id="componenteCookies__container" class="componenteCookies__container">
+		<p class="componenteCookies__texto">
+			Utilizamos cookies propias y de terceros para realizar el análisis de la navegación de los usuarios y mejorar nuestros servicios. Al pulsar Acepto consiente dichas cookies. Puede obtener más información, o bien conocer cómo cambiar la configuración, pulsando en "Más información".
+		</p>
+
+		<div class="componenteCookies__capaBotones">
+			<a href="cookies.html" class="componenteCookies__botones">Más información</a>
+			<p id="componenteCookies__aceptar" class="componenteCookies__botones">Acepto</p>
+		</div>
+	</div>
+</template>
+
+
+
+
+
+<script>
+
+	var componenteCookies = Object.create(HTMLElement.prototype) // Creamos el prototipo de componente
+	var templateCookies = document._currentScript.ownerDocument.querySelector('template').content // Accedemos al template
+
+
+
+
+	componenteCookies.createdCallback = function()
+	{
+      	var clon = document.importNode(templateCookies, true) // Clonamos el template
+
+      	var that = this // this es el <componente-cookies>
+
+
+
+
+
+      	function comprobarCookie(clave) 
+		{
+			var clave = obtenerCookie(clave) // Llamada a la función que revisa la clave
+
+
+			if (clave != "") 
+			{
+			      console.log('La cookie existe') 
+			      ejecutarAnalytics()
+			}
+			else
+			{
+			      console.log('La cookie no existe') 
+
+			      that.style.display = 'block' // Mostramos la etiqueta
+
+			      //=====================================================================================
+			      that.appendChild(clon) // INSERTAMOS EL TEMPLATE EN LA ETIQUETA SÓLO SI NO TIENE COOKIE
+			      //=====================================================================================
+
+
+
+			      // AHORA QUE YA EXISTEN LOS BOTONES EN EL DOM, PODEMOS ASIGNAR EVENTOS
+			      // ===================================================================
+		      	var container = document.getElementById('componenteCookies__container')
+		      	var botonAceptar = document.getElementById('componenteCookies__aceptar')
+
+
+
+		      	botonAceptar.addEventListener('click', function() // ACEPTAR Y EJECUTAR ANALYTICS
+		      	{
+		      		ejecutarAnalytics() // Sólo se ejecuta al aceptar
+
+		      		container.style.top = 'calc(100% - 0px)'
+
+		      		setTimeout(function()
+		      		{
+		      			that.parentNode.removeChild(that) // Eliminar componente
+		      		}, 1000)
+		      	})
+			}
+		}
+		comprobarCookie('_ga') 
+
+
+
+
+
+		function obtenerCookie(clave) 
+		{
+			var name = clave + "=";
+
+			var ca = document.cookie.split(';');
+
+			for(var i=0; i < ca.length; i++) 
+			{
+				var c = ca[i];
+
+				while (c.charAt(0)==' ') c = c.substring(1);
+
+				if(c.indexOf(name) == 0) return c.substring(name.length,c.length);
+			}
+
+			return ""
+		}
+	}
+
+
+
+
+	document.registerElement('componente-cookies', // Aquí registramos nuestra etiqueta
+	{
+      	prototype: componenteCookies
+	})
+
+</script>

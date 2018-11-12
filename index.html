@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="La moda más urbana y casual tienen su espacio en los escaparates de nuestras tiendas Zapa Sport Calzado y complementos para no perderle el pulso a la calle."/>
+	<meta name="keywords" content="calzado, zapatos, tacones, moda, deporte"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+	<title>Zapa</title>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,500,600,700,800,900|Quicksand:400,700" rel="stylesheet">
+
+	<link rel="icon" type="image/png" href="img/favicon.png"/>
+	<link rel="stylesheet" href="css/styles.css"/>
+	<link rel="stylesheet" href="css/fontastic.css"/>
+
+	<!-- Polyfill Webcomponents-->
+	<script src="src/webcomponents-lite.min.js"></script>
+
+	<!-- Importamos el componente -->
+	<link rel="import" href="componente-cookies.html">
+
+</head>
+<body>
+	
+	<div class="containerPrincipal">
+
+		<div id="inicio"></div>
+		
+		<section id="portada" class="portada"></section>
+
+
+		<section class="estiloUrbano">
+			<p class="estiloUrbano__titulo">ESTILO URBANO</p>
+			<div class="estiloUrbano__linea"></div>
+			<p class="estiloUrbano__texto">
+				La moda más urbana y casual tienen su espacio en los escaparates de nuestras tiendas Zapa Sport. Calzado y complementos para no perderle el pulso a la calle.
+			</p>
+		</section>
+
+
+
+		<div id="tiendas"></div>
+
+
+		<section class="nuestrasTiendas">
+			
+			<p class="nuestrasTiendas__titulo">
+				NUESTRAS TIENDAS
+			</p>
+
+			<div class="nuestrasTiendas__caja nuestrasTiendas__caja--imagen1">
+				<div class="nuestrasTiendas__caja--imagenMarco">
+					<img src="img/logo-small.jpg" class="nuestrasTiendas__logo" alt="Zapa">
+					<p class="nuestrasTiendas__nombre">
+						AQUA
+					</p>
+				</div>
+			</div>
+
+			<div class="nuestrasTiendas__caja nuestrasTiendas__caja--direccion1">
+				<div class="nuestrasTiendas__caja--direccionContenido">
+					<div class="nuestrasTiendas__direccion nuestrasTiendas__direccion--titulo">- DIRECCIÓN -</div>
+					<div class="nuestrasTiendas__direccion">C. Comercial Aqua Multiespacio Local 009</div>
+					<div class="nuestrasTiendas__direccion">C/ Menorca, 19. 46009, Valencia</div>
+					<div class="nuestrasTiendas__direccion nuestrasTiendas__direccion--titulo" style="margin-top: 20px;">-TELÉFONO-</div>
+					<div class="nuestrasTiendas__direccion">96 331 14 47</div>
+					<div class="nuestrasTiendas__containerBotones">
+						<div id="botonAqua" class="nuestrasTiendas__boton">
+							<img src="img/icon-maps.png" style="width: 12px; margin-right: 15px;" alt="">
+							<p>Ir a GoogleMaps</p>
+						</div>
+						<div class="nuestrasTiendas__boton">
+							<img src="img/icon-phone.png" style="width: 15px; margin-right: 10px;" alt="">
+							<p>Llamar por teléfono</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nuestrasTiendas__caja nuestrasTiendas__caja--direccion2">
+				<div class="nuestrasTiendas__caja--direccionContenido">
+					<div class="nuestrasTiendas__direccion nuestrasTiendas__direccion--titulo">- DIRECCIÓN -</div>
+					<div class="nuestrasTiendas__direccion">C. Comercial Nuevo Centro Local 131</div>
+					<div class="nuestrasTiendas__direccion">46009, Valencia</div>
+					<div class="nuestrasTiendas__direccion nuestrasTiendas__direccion--titulo"  style="margin-top: 20px;">- TELÉFONO -</div>
+					<div class="nuestrasTiendas__direccion">963 487 699</div>
+					<div class="nuestrasTiendas__containerBotones">
+						<div id="botonNuevo" class="nuestrasTiendas__boton">
+							<img src="img/icon-maps.png" style="width: 12px; margin-right: 15px;" alt="">
+							<p>Ir a GoogleMaps</p>
+						</div>
+						<div class="nuestrasTiendas__boton">
+							<img src="img/icon-phone.png" style="width: 15px; margin-right: 10px;" alt="">
+							<p>Llamar por teléfono</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nuestrasTiendas__caja nuestrasTiendas__caja--imagen2">
+				<div class="nuestrasTiendas__caja--imagenMarco">
+					<img src="img/logo-small.jpg" class="nuestrasTiendas__logo" alt="Zapa">
+					<p class="nuestrasTiendas__nombre">
+						NUEVO CENTRO
+					</p>
+				</div>
+			</div>
+			
+		</section>
+
+
+
+		<div id="trabaja"></div>
+
+
+
+
+
+
+		<!-- *************************************************************************************************************************** -->
+											<!-- FORMULARIO -->
+		<!-- *************************************************************************************************************************** -->
+		
+
+		<section class="formulario">
+			<div class="formulario__caja">
+
+
+				<p class="formulario__titulo">
+					TRABAJA CON NOSOTROS
+				</p>
+
+
+				<div class="formulario__containerInput">
+					<p class="formulario__label">NOMBRE</p>
+					<input type="text" id="nombre" class="formulario__input validar-vacios">
+					<div class="formulario__margen"></div>
+				</div>
+
+
+				<div class="formulario__containerInput">
+					<p class="formulario__label">ASUNTO</p>
+					<input type="text" id="asunto" class="formulario__input validar-vacios">
+					<div class="formulario__margen"></div>
+				</div>
+
+
+				<div class="formulario__containerInput">
+					<p class="formulario__label">E-MAIL</p>
+					<input type="email" id="email" class="formulario__input validar-vacios">
+					<div class="formulario__margen"></div>
+				</div>
+
+
+				<div class="formulario__containerBotones">
+
+					<div class="formulario__boton formulario__boton--file">
+
+						<img src="img/icon-file.png" alt="">
+
+						<label for="file" class="formulario__boton--file">Adjuntar CV</label>
+						<input type="file" name="file" id="file" class="inputfile" />
+					</div>
+					
+					<div id="botonEnviar" class="formulario__boton formulario__boton--enviar">
+						<p id="enviar">Enviar</p>
+					</div>
+
+				</div>
+
+
+				<div class="formulario__politica">
+					<div id="containerCheckbox"></div>
+					<a href="protecciondatos.html">Acepto la política de protección de datos</a>
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+
+
+
+
+
+
+		<div id="contacto"></div>
+
+
+
+
+		<section class="contacto">
+
+			<div class="contacto__marco">
+
+				<p class="contacto__titulo">
+					CONTACTO
+				</p>
+
+				<div class="contacto__datos">
+
+					<div class="contacto__dato">
+						<div class="contacto__icon contacto__icon--maps">
+							<img src="img/icon-maps-2.png" alt="">
+						</div>					
+						<p>C. Comercial Nuevo Centro Local 131</p>
+					</div>
+
+					<div class="contacto__dato">
+						<div class="contacto__icon contacto__icon--phone">
+							<img src="img/icon-phone-2.png" alt="">
+						</div>
+						<p>963 487 699</p>
+					</div>
+
+					<div class="contacto__dato">
+						<div class="contacto__icon contacto__icon--mail">
+							<img src="img/icon-mail.png" alt="">	
+						</div>
+						<a href="mailto:info@calzadoszapa.es">info@calzadoszapa.es</a>
+					</div>
+
+				</div>
+				
+			</div>
+
+		</section>
+
+
+
+
+		<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1T6CI8VymIT1mNyAvuBtDQwndzuUeI6-q" id="containerMapa" class="mapa" width="100%" height="100%"></iframe>
+
+
+
+
+		<footer class="footer">
+
+			<a href="#inicio" class="slide">
+				<div class="footer__circulo">
+					<div class="icon-angle-up"></div>
+				</div>
+			</a>
+
+			<p class="footer__larioSport">
+				Lario Sport S.L &#169; 2016
+			</p>
+		</footer>
+
+
+
+		<nav id="menu" class="menu">
+
+			<ul class="menu__ul">
+
+				<li class="menu__li">
+					<a href="#inicio" class="menu__a slide">
+						INICIO
+					</a>
+				</li>
+
+				<li class="menu__li">
+					<a href="#tiendas" class="menu__a slide">
+						NUESTRAS TIENDAS
+					</a>
+				</li>
+
+				<li class="menu__li">
+					<a href="#trabaja" class="menu__a slide">
+						TRABAJA CON NOSOTROS
+					</a>
+				</li>
+
+				<li class="menu__li">
+					<a href="#contacto" class="menu__a slide">
+						CONTACTO
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+
+
+		<div class="logo">
+			<img src="img/logo.png" alt="">
+		</div>
+
+
+
+	</div>
+
+
+	<script>
+		function ejecutarAnalytics()
+		{
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			// ga('create', 'UA-40876567-1', 'cinesabc.com');
+			// ga('send', 'pageview');
+
+
+			// document.cookie = "usuario = Esta es la cookie"
+			console.log('Cookie insertada') 
+		}
+	</script>
+
+
+
+	<componente-cookies class="avisoCookies"></componente-cookies>
+
+
+
+	<script src="src/nuestras-tiendas.js"></script>
+	<script src="src/checkbox.js"></script>
+	<script src="src/validar-vacios.js"></script>
+	<script src="src/boton-error.js"></script>
+	<script src="src/menu-movil.js"></script>
+	<script src="src/menu.js"></script>
+	<script src="src/ajax.js"></script>
+	<script src="src/formulario.js"></script>
+	<script src="src/direccionar-mapa.js"></script>
+	<script src="src/jquery-3.3.1.min.js"></script>
+	<script src="src/smooth-scrolling-jQuery.js"></script>
+	
+</body>
+</html>
